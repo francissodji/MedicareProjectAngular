@@ -1,0 +1,60 @@
+
+<div>
+    <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+          </a>
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li class="nav-item"><a routerLink="home" class="nav-link px-2 text-white">Medicare</a></li>
+            <li class="nav-item"><a routerLink="about" class="nav-link px-2 text-white">About</a></li>
+            <li class="nav-item"><a routerLink="contact" class="nav-link px-2 text-white">Contact</a></li>
+            <li class="nav-item"><a routerLink="listmedecin" class="nav-link px-2 text-white">View Product</a></li>
+          
+            <li class="nav-item"><a routerLink="medecineincart" class="nav-link px-2 text-white">Medecin InCart</a></li>
+            
+          </ul>
+  
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+          </form>
+  
+          <div class="text-end">
+  
+            <a routerLink = '/login' class="btn btn-outline-light me-2">Login</a>
+            <a routerLink = '/signup' class="btn btn-outline-light me-2">Sign up</a>
+            
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+          <router-outlet>
+               <!--This is the placeholder to render your views here.. -->
+          </router-outlet>
+      </div>
+    </div>
+  
+    <!--Footer-->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-muted">&copy; 2021 Medicare, Inc</p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+          </a>
+      
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a routerLink="medicare" class="nav-link px-2 text-white">Medicare</a></li>
+            <li class="nav-item"><a routerLink="about" class="nav-link px-2 text-white">About</a></li>
+            <li class="nav-item"><a routerLink="contact" class="nav-link px-2 text-white">Contact</a></li>
+            <li class="nav-item"><a routerLink="listmedecin" class="nav-link px-2 text-white">View Product</a></li>
+          </ul>
+        </footer>
+      </div>
+  
+  </div>

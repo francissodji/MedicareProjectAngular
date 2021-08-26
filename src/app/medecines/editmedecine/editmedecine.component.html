@@ -1,0 +1,33 @@
+<p>editmedecine works!</p>
+
+
+<p>userseditauser works!</p>
+
+<h3>User information</h3><br/><br/>
+
+<div class="card">
+    <div class="card-header">
+      Detail of - {{resultMedecin.designMedecin}}
+    </div>
+    <div class="card-body">
+      <table>
+          <tbody>
+            <tr>
+                <th>Medecin Id</th>
+                <td>{{resultMedecin.idmedecin}}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{resultMedecin.designMedecin}}</td>
+            </tr>
+
+
+          </tbody>
+      </table>
+    </div>
+
+    <div class="card-footer text-muted">
+      <a routerLink='/listallusers' class="btn btn-secondary">Go back</a>
+    </div>
+
+  </div>

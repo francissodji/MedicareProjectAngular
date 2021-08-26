@@ -1,0 +1,41 @@
+
+
+<head>
+    <meta name="theme-color" content="#7952b3">
+
+    
+
+</head>
+<body class="text-center">
+
+  <main class="form-signin">
+    <div class="form-group">
+      <form (onSubmit) = "loginUser">
+        <small class="danger">{{msg}}</small>
+        <!--<img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">-->
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    
+
+        
+        <div class="form-group">
+          <input type="email" class="form-control" name="userName" placeholder="name@example.com" ngModel>
+          
+          <div class="alert alert-danger" *ngIf="!userEmail.valid">Email is required</div>
+        </div>
+
+        <div class="form-group">
+          <input type="password" class="form-control"  name="passWord" placeholder="Password" >
+          
+        </div>
+    
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit" >Login</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2010–2021</p>
+      </form>
+    </div>
+   </main>
+ </body>

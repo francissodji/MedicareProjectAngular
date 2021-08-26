@@ -1,0 +1,36 @@
+<!--<pre>{{user | json }}</pre>-->
+<h2>New user registration</h2>
+<br/><br/><br/>
+
+<div backgroundcolor:green>
+    <form class="row g-3">
+        <div class="col-md-5">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" name="firstName" [(ngModel)] = "newUser.firstname">
+        </div><br/>
+
+        <div class="col-md-4">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" name="lastname" class="form-control" [(ngModel)] = "newUser.lastname">
+        </div>
+
+        <div class="col-md-6">
+            <label for="braiderusername" class="form-label">Username</label>
+            <input type="text" required class="form-control" name="braiderusername" [(ngModel)] = "newUser.username">
+        </div>
+
+        <div class="col-md-6">
+            <label for="userPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" name="userPassword" [(ngModel)] = "newUser.password">
+        </div>
+
+        <div class="col-md-6">
+            <label for="userPasswordConf" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" name="userPasswordConf">
+        </div>
+
+        <div class="col-12">
+        <button type="submit" class="btn btn-primary" name="btSubmit" >Save</button>
+        </div>
+    </form>
+</div>

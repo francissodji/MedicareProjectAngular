@@ -1,0 +1,60 @@
+
+<h3>New Medecine</h3>
+
+<div backgroundcolor:green>
+    <form class="row g-3">
+        <div class="col-md-8">
+            <label for="medecName" class="form-label"> Name</label>
+            <input type="text" class="form-control" name="medecName" >
+        </div><br/>
+
+        <div class="col-md-4">
+            <label for="medecBrand" class="form-label">Brand</label>
+            <input type="text" class="form-control" name="medecBrand">
+        </div><br/>
+
+        <div class="col-md-12">
+            <label for="medecDescript" class="form-label">Descriotion</label>
+            <input type="textarea" rows="5" cols="40" class="form-control" name="medecDescript">
+        </div><br/>
+
+        <div class="form-group">
+            <label for="medecDescript">Description</label>
+            <textarea class="form-control rounded-1" id="medecDescript" rows="5"></textarea>
+        </div>
+
+        <div class="col-md-4">
+            <label for="medecUnitpric" class="form-label">Unit Price</label>
+            <input type="text" class="form-control" height="20px" name="medecUnitpric">
+        </div><br/>
+
+        <div class="col-md-4">
+            <label for="medecQttyDispo" class="form-label">Available Quantity</label>
+            <input type="password" class="form-control" name="medecQttyDispo">
+        </div><br/>
+
+        <div class="col-md-4">
+            <label for="medecCateg" class="form-label">Category</label>
+            <select class="form-control" name="medecCateg">
+                <option value="0">--- Select Category ---</option>
+                <option value="1">Cat 1</option>
+                <option value="2">Cat 2</option>
+                <option value="3">Cat 3</option>
+
+            </select>
+        </div><br/>
+
+        <div class="col-md-8">
+            <label for="medecPicture" class="form-label">Picture</label>
+            <input type="file" class="form-control" name="medecPicture">
+        </div><br/>
+
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-primary" name="btSubmit" (click)=newUserMedecin()>Save Medecine</button>
+        </div>
+        <div class="col-md-6">
+            <a routerLink='/listmedecin' class="btn btn-secondary">Go back List</a>
+        </div>
+
+    </form>
+</div>
