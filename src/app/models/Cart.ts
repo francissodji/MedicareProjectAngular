@@ -1,7 +1,8 @@
-import { User } from "./User";
+import { UserModel } from "./UserModel";
+
 
 export class Cart{
     idcart: number = 0;
     labelCart: String = '';
-    userCart: User = new User();
+    userCart: UserModel = new UserModel();
 }

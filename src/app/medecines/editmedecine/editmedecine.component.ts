@@ -11,7 +11,8 @@ import { Medecin } from 'src/app/models/Medecin';
 export class EditmedecineComponent implements OnInit {
 
   theselectedIdMed: any;
-  resultMedecin:Medecin = new Medecin();
+  resultMedecin: any;
+  //resultMedecin:Medecin = new Medecin();
 
   constructor(private _activatedroute: ActivatedRoute, private _httpClient: HttpClient) { }
 
@@ -24,10 +25,14 @@ export class EditmedecineComponent implements OnInit {
     this.theselectedIdMed = this._activatedroute.snapshot.paramMap.get("idmedecin");
 
     console.log(this.theselectedIdMed);
-    this._httpClient.get<Medecin>('http://localhost:8090/medecine/amedecine/'+ this.theselectedIdMed).subscribe(
+    this._httpClient.get('http://localhost:8090/api/medecine/amedecine/'+ this.theselectedIdMed).subscribe(
       result =>{this.resultMedecin = result; console.log(this.resultMedecin);},
       error =>{console.log("There are some error"); console.log(error) }
     )
+  }
+
+  addItemtoCart(){
+
   }
 
 }

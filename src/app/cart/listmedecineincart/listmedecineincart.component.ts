@@ -31,8 +31,7 @@ export class ListmedecineincartComponent implements OnInit {
   medecineInCartForAUser(){
     //this.aIdConnectedUser = this._activatedRoute.snapshot.paramMap.get("idmedecin");
 
-
-    this._httpClient.get('http://localhost:8090/medecinincart/unsolditems/'+this.aIdConnectedUser).subscribe(
+    this._httpClient.get('http://localhost:8090/api/medecinincart/unsolditems/'+this.aIdConnectedUser).subscribe(
       result =>{this.allMedecineInCart = result; console.log(this.allMedecineInCart);},
       error =>{console.log("There are some error ..."); console.log(error);}
     )

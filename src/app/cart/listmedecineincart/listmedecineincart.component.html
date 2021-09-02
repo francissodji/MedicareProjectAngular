@@ -6,34 +6,50 @@
 
 <!--<h4><a [routerLink] = "['/usersaddusers']">Add New User</a></h4><br/>-->
 
+<div class="container" >
+    <div class="row">
+        <table class="table table-hover">
 
-<table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>Product</td>
+                    <td>Description</td>
+                    <td>Unit Price</td>
+                    <td>Quantity</td>
+                    <td>SubTotal</td>
+        
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr *ngFor="let aMedec of allMedecineInCart">
+                    <td>{{ aMedec.designMedecin }}</td>
+                    <td>{{ aMedec.description }}</td>
+                    <td>{{ aMedec.qttyAvail }}</td>
+                    <td>{{ aMedec.unitPrice }}</td>
+                    <td>{{ aMedec.unitPrice * aMedec.qttyAvail }}</td>
+                    
+                    
+        
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <thead>
-        <tr>
-            <td>Product</td>
-            <td>Description</td>
-            <td>Unit Price</td>
-            <td>Quantity</td>
-            <td>SubTotal</td>
+    <div class="row">
+        <table>
+            <tr>
+                <td align="left">
+                    <a [routerLink] = "['/listmedecin']" class="btn btn-secondary">Continue shopping</a>
+                </td>
+                <td align="right">
+                    <a [routerLink] = "['/checkout']" class="btn btn-secondary">Checkout</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</div>
 
-        </tr>
-    </thead>
-    <tbody>
 
-        <tr *ngFor="let aMedec of allMedecineInCart">
-            <td>{{ aMedec.designMedecin }}</td>
-            <td>{{ aMedec.description }}</td>
-            <td>{{ aMedec.qttyAvail }}</td>
-            <td>{{ aMedec.unitPrice }}</td>
-            <td>{{ aMedec.unitPrice * aMedec.qttyAvail }}</td>
-            <!--<td>
-                <a [routerLink] = "['/editmedecine', aMedec.idmedecin]" class="mat-radio-button">check</a>
-            </td>
-            <td>
-                <a [routerLink] = "['/editmedecine', aMedec.idmedecin]" class="btn btn-primary">Edit</a>
-            </td>-->
 
-        </tr>
-    </tbody>
-</table>

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Category } from 'src/app/models/Category';
 import { Medecin } from 'src/app/models/Medecin';
 
 @Component({
@@ -13,20 +14,31 @@ import { Medecin } from 'src/app/models/Medecin';
 export class AddnewmedecinComponent implements OnInit {
 
 
-  newMedecin: Medecin = new Medecin();
+  newMedecine: Medecin = new Medecin();
+  //categoryList: Category = new Category();
 
-
+  categoryList: any;
 
   constructor(private _httpClient: HttpClient) { }
 
   ngOnInit(): void {
 
+    this.getAllCategories()
   }
 
-  newUserMedecin()
+  getAllCategories()
   {
-    this._httpClient.get<Medecin>('http://localhost:8090/medecine/addmedecine').subscribe(
-      result =>{this.newMedecin = result; console.log(this.newMedecin);},
+    this._httpClient.get<Category>('http://localhost:8090/category/allcategories').subscribe(
+      result =>{this.categoryList = result; console.log(this.categoryList);},
+      error =>{console.log("There are some error ..."); console.log(error);}
+    )
+  }
+
+  newUserMedecine()
+  {
+    this.newMedecine.stateactivate = true; // all medecine are active once the are created
+    this._httpClient.post('http://localhost:8090/api/medecine/addmedecine', this.newMedecine).subscribe(
+      result =>{alert("Medecine successfully added.")},
       error =>{console.log("There are some error ..."); console.log(error);}
     )
   }

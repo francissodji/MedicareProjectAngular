@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/User';
+import { UserModel } from 'src/app/models/UserModel';
 
 @Component({
   selector: 'app-userlogin',
@@ -13,44 +12,31 @@ import { User } from 'src/app/models/User';
 
 export class UserloginComponent implements OnInit {
 
-  form: FormGroup;
-  msg: any;
-
   aUserName: any;
   aPassword: any;
+  userToConnect: UserModel = new UserModel();
+  connectedUser: UserModel = new UserModel();
 
-  //userinfo: User = new User();
-  //connectedUser: User = new User()
+  public connectedUserId: any;
 
+  errorMessage: any;
 
-  constructor(private _httpClient: HttpClient, private _router: Router, private _formBuilder: FormBuilder) {
-    this.form = this._formBuilder.group({
-      //userName: new FormControl('',[Validators.required])
-      //passWord: new FormControl('',[Validators.required])
-
-    })
-   }
-
-
-
-  
+  constructor(private _httpClient: HttpClient, private _router: Router) { }
 
   ngOnInit(): void {
-
   }
 
 
-  loginUser(): void {
-    /*
-    this.aUserName = this.userinfo.userName;
-    this.aPassword = this.userinfo.passWord;
+  userLogin()
+  {
 
-    this._httpClient.post('http://localhost:8090/user/userlogin/', this.userinfo.userName ).subscribe(
-      result =>{console.log("Correct login.")},
-      error => {console.log("Wrong credential");}
-    );
-    */
+    this._httpClient.post<any>('http://localhost:8090/api/user/login',this.userToConnect).subscribe(
+      //result =>{this.connectedUser = result; alert("Correct registration"); console.log(this.connectedUser);},
+      result => {console.log("Correct registration"); this.userToConnect = result; 
+                  this.connectedUserId = result.iduser; console.log(this.connectedUserId); this._router.navigate(['/listmedecin'])},
+      error =>{console.log("An exception has occured."); 
+                  /*this.errorMessage = "Bad Credentials. Please enter valid username and password"*/
+                  alert("Bad Credentials. Please enter valid username and password.");}
+    )
   }
-  
-
 }

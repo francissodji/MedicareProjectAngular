@@ -1,0 +1,25 @@
+<p>addcategory works!</p>
+
+
+<div class="container">
+
+    <form class="row g-3">
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <label for="libCateg" class="form-label">Category</label>
+                <input type="text" class="form-control" [(ngModel)] = "newCateg.libelcateg" name="libCateg">
+            </div><br/>
+        </div><br>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary" name="btSubmit" (click) = "addNewCategory()">Save Category</button>
+            </div><br/>
+        </div>
+
+    </form>
+    
+</div>

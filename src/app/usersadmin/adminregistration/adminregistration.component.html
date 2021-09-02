@@ -1,0 +1,38 @@
+
+
+
+<div class="container">
+    <form class="row g-3">
+        <div class="col-md-4">
+            <label for="uUserFName" class="form-label"> First Name</label>
+            <input type="text" class="form-control" [(ngModel)] = "aNewUser.firstName" name="uUserFName" >
+        </div><br/>
+
+        <div class="col-md-4">
+            <label for="uUserLName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" [(ngModel)] = "aNewUser.lastName" name="uUserLName">
+        </div><br/>
+
+
+
+        <div class="col-md-4">
+            <label for="uUserUname" class="form-label">Username</label>
+            <input type="text" class="form-control" height="20px" [(ngModel)] = "aNewUser.userName" name="uUserUname">
+        </div><br/>
+
+        <div class="col-md-6">
+            <label for="uUserPword" class="form-label">Password</label>
+            <input type="password" class="form-control" [(ngModel)] = "aNewUser.passWord" name="uUserPword">
+        </div><br/>
+
+        <div class="col-md-6">
+            <label for="uUserPwordConf" class="form-label">Confirmed Password</label>
+            <input type="password" class="form-control" name="uUserPwordConf">
+        </div><br/>
+
+        <div class="text-center col-md-6">
+            <button type="submit" class="btn btn-primary"  name="btSubmit" (click)=addNewAdmin()>Save Administrator</button>
+        </div>
+
+    </form>
+</div>

@@ -13,6 +13,19 @@ import { EditmedecineComponent } from './medecines/editmedecine/editmedecine.com
 import { ListmedecineincartComponent } from './cart/listmedecineincart/listmedecineincart.component';
 import { ContactComponent } from './menus/contact/contact.component';
 import { AboutComponent } from './menus/about/about.component';
+import { CheckoutComponent } from './cart/checkout/checkout.component';
+import { CheckoutsuccessComponent } from './cart/checkoutsuccess/checkoutsuccess.component';
+import { CheckoutdenialComponent } from './cart/checkoutdenial/checkoutdenial.component';
+import { AddcategoryComponent } from './categories/addcategory/addcategory.component';
+import { UserregistrationComponent } from './users/userregistration/userregistration.component';
+import { UserloginComponent } from './users/userlogin/userlogin.component';
+import { ListMedecineAdminComponent } from './medecines/list-medecine-admin/list-medecine-admin.component';
+import { ModifymedecineadminComponent } from './medecines/modifymedecineadmin/modifymedecineadmin.component';
+import { DeletemedecineadminComponent } from './medecines/deletemedecineadmin/deletemedecineadmin.component';
+import { AdminloginComponent } from './usersadmin/adminlogin/adminlogin.component';
+import { AdminregistrationComponent } from './usersadmin/adminregistration/adminregistration.component';
+import { EditmedecineadminComponent } from './medecines/editmedecineadmin/editmedecineadmin.component';
+import { ActivdeactivmedecineadminComponent } from './medecines/activdeactivmedecineadmin/activdeactivmedecineadmin.component';
 
 
 @NgModule({
@@ -25,14 +38,27 @@ import { AboutComponent } from './menus/about/about.component';
     GeneralmenuComponent,
     EditmedecineComponent,
     ListmedecineincartComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    CheckoutComponent,
+    CheckoutsuccessComponent,
+    CheckoutdenialComponent,
+    AddcategoryComponent,
+    UserregistrationComponent,
+    UserloginComponent,
+    ListMedecineAdminComponent,
+    ModifymedecineadminComponent,
+    DeletemedecineadminComponent,
+    AdminloginComponent,
+    AdminregistrationComponent,
+    EditmedecineadminComponent,
+    ActivdeactivmedecineadminComponent
     
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     RouterModule.forRoot(MedicareRoute),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [GeneralmenuComponent]

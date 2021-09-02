@@ -10,6 +10,7 @@ export class GeneralmenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -1,16 +1,18 @@
+import { CartMedecine } from "./CartMedecine";
 import { Category } from "./Category";
 
 export class Medecin{
 
     idmedecin: number = 0;
-    designMedecin: String = '';
-    brand: String = '';
-    qttyAvail: number = 0;
-    unitPrice: number = 0.0;
-    description: String = '';
-    stateActivate: boolean = false;
-    picture: String = '';
+    designmedecin: string = '';
+    brand: string = '';
+    qttyavail: number = 0;
+    unitprice: number = 0.0;
+    description: string = '';
+    stateactivate: boolean = false;
+    picture: string = '';
     category: Category = new Category();
+    //cartformedecin: CartMedecine = new CartMedecine();
 
 
     constructor(){}
