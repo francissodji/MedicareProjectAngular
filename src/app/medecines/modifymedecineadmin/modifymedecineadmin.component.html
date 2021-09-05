@@ -1,1 +1,58 @@
-<p>modifymedecineadmin works!</p>
+
+
+
+
+
+<h3>Medecine Detail</h3><br/><br/>
+
+<div class="container col-md-8">
+
+  <form class="row g-3">
+    <div class="card">
+      <div class="card-header">
+        Detail of - {{resultMedecin.designMedecin}}
+      </div>
+
+      <div class="card-body">
+        <div class="row">
+          <div class="col col-md-4">
+
+            <div class="row">
+              <tr><th>Qty Avail.: </th> <td>{{resultMedecin.qttyAvail}}</td></tr>
+            </div>
+
+            <div class="row">
+              <tr><th>Qty Avail.: </th> <td>{{resultMedecin.unitPrice}}</td></tr>
+            </div>
+          </div>
+
+          <div class="col col-md-4"><!--Description-->
+            <div class="row">
+              {{resultMedecin.description}}
+            </div>
+          </div>
+
+          <div class="col col-md-4"><!--Description-->
+            <div class="row">
+              {{resultMedecin.picture}}
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card-footer text-muted">
+        <div class="row">
+          <div class="col col-md-6">
+            <a routerLink='/listmedecinadmin' class="btn btn-secondary">Go back</a>
+          </div>
+
+        </div>
+  
+      </div>
+    </div>
+
+    
+  </form>
+
+</div>
+

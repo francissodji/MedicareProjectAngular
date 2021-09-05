@@ -18,7 +18,7 @@ import { ModifymedecineadminComponent } from "./medecines/modifymedecineadmin/mo
 import { DeletemedecineadminComponent } from "./medecines/deletemedecineadmin/deletemedecineadmin.component";
 import { AdminregistrationComponent } from "./usersadmin/adminregistration/adminregistration.component";
 import { AdminloginComponent } from "./usersadmin/adminlogin/adminlogin.component";
-import { EditmedecineadminComponent } from "./medecines/editmedecineadmin/editmedecineadmin.component";
+import { EditadminmedecineComponent } from "./medecines/editadminmedecine/editadminmedecine.component";
 
 
 
@@ -31,10 +31,11 @@ export const MedicareRoute: Routes = [
 
     
     { path: 'listmedecinadmin', component: ListMedecineAdminComponent },
-    { path: 'editmedecineadmin', component: EditmedecineadminComponent },
-    { path: 'modifymedecineadmin', component: ModifymedecineadminComponent },
-    { path: 'deletemedecineadmin', component: DeletemedecineadminComponent },
-    
+    { path: 'editadminmedecine/:idmedecin', component: EditadminmedecineComponent},
+    { path: 'modifymedecineadmin/:idmedecin', component: ModifymedecineadminComponent },
+    { path: 'deletemedecineadmin/:idmedecin', component: DeletemedecineadminComponent },
+    //{ path: 'activdeactivmedecineadmin/:idmedecin', component: EditmedecineadminComponent },
+
     { path: 'addnewmedecin', component: AddnewmedecinComponent },
     { path: 'listmedecin', component: ListmedecinComponent },
     { path: 'editmedecine/:idmedecin', component: EditmedecineComponent },

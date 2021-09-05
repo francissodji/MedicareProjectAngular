@@ -1,23 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Medecin } from 'src/app/models/Medecin';
 
 @Component({
-  selector: 'app-editmedecine',
-  templateUrl: './editmedecine.component.html',
-  styleUrls: ['./editmedecine.component.css']
+  selector: 'app-editadminmedecine',
+  templateUrl: './editadminmedecine.component.html',
+  styleUrls: ['./editadminmedecine.component.css']
 })
-export class EditmedecineComponent implements OnInit {
+export class EditadminmedecineComponent implements OnInit {
+
 
   theselectedIdMed: any;
   resultMedecin: any;
-  //resultMedecin:Medecin = new Medecin();
 
   constructor(private _activatedroute: ActivatedRoute, private _httpClient: HttpClient) { }
 
   ngOnInit(): void {
-
     this.editmedecine();
   }
 
@@ -29,10 +27,6 @@ export class EditmedecineComponent implements OnInit {
       result =>{this.resultMedecin = result; console.log(this.resultMedecin);},
       error =>{console.log("There are some error"); console.log(error) }
     )
-  }
-
-  addItemtoCart(){
-    
   }
 
 }

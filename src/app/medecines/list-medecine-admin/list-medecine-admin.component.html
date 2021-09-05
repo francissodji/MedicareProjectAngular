@@ -23,27 +23,27 @@
     </thead>
     <tbody>
 
-        <tr *ngFor="let aMedec of allMedecinList">
-            <td>{{ aMedec.idmedecin }}</td>
+        <tr *ngFor="let medAdmin of allMedecinList">
+            <td>{{ medAdmin.idmedecin }}</td>
             <!--<td><img [src]="aMedec.picture ? pictureDirectoryPath+aMedec.picture : 
                 'assets/image/noImage.png'"></td>-->
-            <td>{{ aMedec.designMedecin }}</td>
-            <td>{{ aMedec.brand }}</td>
-            <td>{{ aMedec.qttyAvail }}</td>
-            <td>{{ aMedec.unitPrice }}</td>
+            <td>{{ medAdmin.designMedecin }}</td>
+            <td>{{ medAdmin.brand }}</td>
+            <td>{{ medAdmin.qttyAvail }}</td>
+            <td>{{ medAdmin.unitPrice }}</td>
             <td>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                 </div>
             </td>
             <td>
-                <a [routerLink] = "['/editmedecineadmin', aMedec.idmedecin]" class="btn btn-primary">Edit</a>
+                <a [routerLink] = "['/editadminmedecine', medAdmin.idmedecin]" class="btn btn-primary">Edit</a>
             </td>
             <td>
-                <a [routerLink] = "['/modifymedecineadmin', aMedec.idmedecin]" class="btn btn-warning">Modify</a>
+                <a [routerLink] = "['/modifymedecineadmin', medAdmin.idmedecin]" class="btn btn-warning">Modify</a>
             </td>
             <td>
-                <a [routerLink] = "['/deletemedecineadmin', aMedec.idmedecin]" class="btn btn-danger">Delete</a>
+                <a [routerLink] = "['/deletemedecineadmin', medAdmin.idmedecin]" class="btn btn-danger">Delete</a>
             </td>
 
         </tr>

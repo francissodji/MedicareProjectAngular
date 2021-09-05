@@ -2,36 +2,42 @@
 
 <h3>List of Medecines</h3><br/>
 
-<!--<h4><a [routerLink] = "['/usersaddusers']">Add New User</a></h4><br/>-->
+<!--<h4><a [routerLink]="['/addnewmedecin']">Add New Medecine</a></h4>-->
 
-<h4><a [routerLink]="['/addnewmedecin']">Add New Medecine</a></h4>
+<div>
+    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search" name="searchelement" [(ngModel)]="searchElement" (keypress)="serachMedecin()">
+    </form>
+</div> 
 
-<table class="table table-hover">
+<div>
+    <table class="table table-hover">
 
-    <thead>
-        <tr>
-            <td>Id</td>
-            <td>Picture</td>
-            <td>Name</td>
-            <td>Brand</td>
-            <td>Quantity</td>
-            <td>Unit Price</td>
-            <td>Edit</td>
-        </tr>
-    </thead>
-    <tbody>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Picture</td>
+                <td>Name</td>
+                <td>Brand</td>
+                <td>Quantity</td>
+                <td>Unit Price</td>
+                <td>Edit</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aMedec of allMedecinList">
+                <td>{{ aMedec.idmedecin }}</td>
+                <td><img [src]= "aMedec.picture">?</td>
+                <td>{{ aMedec.designMedecin }}</td>
+                <td>{{ aMedec.brand }}</td>
+                <td>{{ aMedec.qttyAvail }}</td>
+                <td>{{ aMedec.unitPrice }}</td>
+                <td>
+                    <a [routerLink] = "['/editmedecine', aMedec.idmedecin]" class="btn btn-primary">Edit</a>
+                </td>
+    
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-        <tr *ngFor="let aMedec of allMedecinList">
-            <td>{{ aMedec.idmedecin }}</td>
-            <td><img [src]= "aMedec.picture">?</td>
-            <td>{{ aMedec.designMedecin }}</td>
-            <td>{{ aMedec.brand }}</td>
-            <td>{{ aMedec.qttyAvail }}</td>
-            <td>{{ aMedec.unitPrice }}</td>
-            <td>
-                <a [routerLink] = "['/editmedecine', aMedec.idmedecin]" class="btn btn-primary">Edit</a>
-            </td>
-
-        </tr>
-    </tbody>
-</table>

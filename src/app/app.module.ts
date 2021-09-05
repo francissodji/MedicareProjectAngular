@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 import { MedicareRoute } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './menus/home/home.component';
@@ -24,8 +26,9 @@ import { ModifymedecineadminComponent } from './medecines/modifymedecineadmin/mo
 import { DeletemedecineadminComponent } from './medecines/deletemedecineadmin/deletemedecineadmin.component';
 import { AdminloginComponent } from './usersadmin/adminlogin/adminlogin.component';
 import { AdminregistrationComponent } from './usersadmin/adminregistration/adminregistration.component';
-import { EditmedecineadminComponent } from './medecines/editmedecineadmin/editmedecineadmin.component';
 import { ActivdeactivmedecineadminComponent } from './medecines/activdeactivmedecineadmin/activdeactivmedecineadmin.component';
+import { SearchmedecineComponent } from './medecines/searchmedecine/searchmedecine.component';
+import { EditadminmedecineComponent } from './medecines/editadminmedecine/editadminmedecine.component';
 
 
 @NgModule({
@@ -50,15 +53,17 @@ import { ActivdeactivmedecineadminComponent } from './medecines/activdeactivmede
     DeletemedecineadminComponent,
     AdminloginComponent,
     AdminregistrationComponent,
-    EditmedecineadminComponent,
-    ActivdeactivmedecineadminComponent
+    ActivdeactivmedecineadminComponent,
+    SearchmedecineComponent,
+    EditadminmedecineComponent
     
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(MedicareRoute),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [GeneralmenuComponent]
